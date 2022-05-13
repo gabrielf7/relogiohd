@@ -1,0 +1,35 @@
+body {
+  color: rgb(228, 255, 251);
+  background-color: #03bda4;
+}
+
+#containerdataHJ {
+  display: flex;
+  font-size: 30px;
+  justify-Content: space-between;
+  font-family: sans-serif;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-Content: center;
+  font-size: 50px;
+}
+
+#exibaHorario {
+  font-family: verdana;
+  font-size: 107px;
+}
+
+footer {
+  margin-top: 8vw;
+  text-align: center;
+  font-style: oblique;
+  color: rgb(228, 255, 251);
+  font: normal 12pt Arial;
+}
+
+footer p a {
+  text-decoration: none; color: inherit;
+}
