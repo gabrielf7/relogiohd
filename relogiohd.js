@@ -4,8 +4,16 @@ const semana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Qui
 */
 
 function CarregarRelogio() {
+  // Pegar os seletores do relógio (Hora, Minuto e Segundo)
+  let hora = window.document.querySelector("[data-ponteiro-hora]");
+  let minuto = window.document.querySelector("[data-ponteiro-minuto]");
+  let segundo = window.document.querySelector("[data-ponteiro-segundo]");
+  
+  // Descobrir Data Atual
+  const dataAtual = () => new Date();
+
   // Descobrir o timeZoneName (Nome do Fuso Horário) //
-  const opcoesHorarioNomeLocal = {
+  const nomeDoFusoHorario = {
     day: '2-digit',
     timeZoneName: "long"
   };
@@ -21,47 +29,57 @@ function CarregarRelogio() {
 
   // Inserir o CSS com JS
   function InserirCSS() {
-    let styledRelogioHD = window.document.createElement("link");
-    styledRelogioHD.rel = "stylesheet"; styledRelogioHD.href = "./relogiohd.css";
+    const styledRelogioHD = window.document.createElement("link");
+    styledRelogioHD.rel = "stylesheet"; styledRelogioHD.type = "text/css"; styledRelogioHD.href = "./relogiohd.css";
     window.document.head.insertBefore(
       styledRelogioHD, window.document.head.lastElementChild
     );
   }
 
   // Informar o Nome do Fuso Horário
-  function NomeDoFusoHorarioHJ() {
-    let dataHjFH = new Date();
-    let nomeFH = dataHjFH.toLocaleDateString("pt-br", opcoesHorarioNomeLocal).slice(2);
+  function NomeDoFusoHorario() {
+    let nomeFH = dataAtual().toLocaleDateString("pt-br", nomeDoFusoHorario).slice(2);
     document.getElementById("nomeDoHorario").innerHTML = `${nomeFH}`;
   }
 
   // Descobrir Data e Horario //
-  function DataHorarioHJ(now) {
-    let dataHj = new Date();
-    let dateFormat = new Intl.DateTimeFormat([], opcoesHorario);
-    let opcoesData = now === "datahj" ? dataHj : dateFormat.format(dataHj);
+  function DataHorarioHJ(hoje) {
+    let formatoDeData = new Intl.DateTimeFormat([], opcoesHorario);
+    let opcoesData = hoje === "datahj" ? dataAtual() : formatoDeData.format(dataAtual());
     return opcoesData;
   }
 
   // Informar Data de Hoje
   function InformarDataDeHJ() {
-    let infodata = (op) => { return DataHorarioHJ("datahj").toLocaleDateString("pt-br", op) };
-    let infoDataFormt = infodata(opcoesData);
+    let infoData = (op) => DataHorarioHJ("datahj").toLocaleDateString("pt-br", op);
+    let infoDataFormt = infoData(opcoesData);
     document.getElementById("dataHJ").textContent = `${infoDataFormt[0].toUpperCase()}${infoDataFormt.substring(1)}`;
+  }
+
+  // Acrescendar 1 GRAU para cada segundo
+  function setRotacao(elemento, rRotacao) {
+    elemento.style.setProperty("--rotation", rRotacao * 360);
   }
 
   // Relogio para o Body e o Head 
   function TempoDoRelogio() {
-    document.getElementById("exibaHorarioTitle").innerHTML = `
-    Horário BR - ${DataHorarioHJ("hr")}
-    `;
-    document.getElementById("exibaHorario").innerHTML = `${DataHorarioHJ("hr")}`;
+    nomeDoFusoHorario.timeZoneName = "short";
+    let pNomeDoFusoHorario = dataAtual().toLocaleDateString("pt-br", nomeDoFusoHorario).slice(2);
+    document.getElementById("exibaHorarioTitle").innerHTML = `Horário ${pNomeDoFusoHorario} - ${DataHorarioHJ("hr")}`;
+
+    const segundos = (dataAtual().getSeconds() / 60);
+    const minutos = ((segundos + dataAtual().getMinutes()) / 60);
+    const horas = ((minutos + dataAtual().getHours()) / 12);
+    setRotacao(segundo, segundos);
+    setRotacao(minuto, minutos);
+    setRotacao(hora, horas);
+
     setTimeout(TempoDoRelogio, 1000);
   }
 
   // Executar
   InserirCSS();
-  NomeDoFusoHorarioHJ();
+  NomeDoFusoHorario();
   InformarDataDeHJ();
   TempoDoRelogio();
 }

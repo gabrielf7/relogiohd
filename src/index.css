@@ -39,6 +39,11 @@ main {
   transform: rotate(var(--rotation));
 }
 
+/* #containerRelogio .numeroHt { 
+  padding: 0px;
+} */
+
+/* #containerRelogio .n01t { --rotation: 17deg; } */
 #containerRelogio .n01 { --rotation: 30deg; }
 #containerRelogio .n02 { --rotation: 60deg; }
 #containerRelogio .n03 { --rotation: 90deg; }
