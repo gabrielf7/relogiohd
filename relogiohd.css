@@ -3,15 +3,82 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#containerdataHJ {
+@font-face {
+  font-family: OneSlice;
+  src: url(./fonts/One\ Slice.otf);
+}
+
+:root{
+  --fonteRelogio: 'OneSlice';
+  --cor-verde: rgba(36, 85, 55, 0.9);
+  --cor-verde-after: rgba(13, 46, 26, 1);
+  --cor-span-01: rgb(238, 241, 4, 0.9);
+  --cor-span-02: rgba(190, 187, 199, 0.9);
+  --cor-cinza: rgba(231, 227, 231, 0.9);
+  --cor-branco: rgba(255, 255, 255, 1);
+}
+
+/* .container {
+  display: flex;
+}
+#container01 {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container01 a { 
+  text-decoration: none;
+  width: 1px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  color: var(--cor-branco);
+}
+#container02 {
+  width: 90%;
+} */
+
+.manha, .tarde, .noite, .madrugada {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:filter .5s ease;
+  backface-visibility: hidden;
+}
+.manha { background-image: url("./src/img-dia-01.jpg"); }
+.tarde { background-image: url("./src/img-dia-02.jpg"); }
+.noite { background-image: url("./src/img-noite-01.jpg"); }
+.madrugada { background-image: url("./src/img-noite-02.jpg"); }
+
+abbr[title] {
+  text-decoration: none;
+}
+
+#containerFHDataHJ {
   display: flex;
   font-size: 30px;
-  justify-Content: space-between;
-  font-family: sans-serif;
+  justify-content: space-around;
+}
+#containerFHDataHJ span {
+  padding: 5px 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--cor-verde); 
+}
+#containerFHDataHJ span p {
+  background-color: var(--cor-verde); 
+  color: var(--cor-branco);
+}
+#containerFHDataHJ span .bottomSpanDia, #containerFHDataHJ span .bottomSpanNoite {
+  margin-top: -20px;
+}
+#containerFHDataHJ span .bottomSpanDia {
+  border-bottom: 2px solid var(--cor-span-01);
+}
+#containerFHDataHJ span .bottomSpanNoite {
+  border-bottom: 2px solid var(--cor-span-02);
 }
 
 main {
-  background: linear-gradient(to left, rgb(36, 147, 238), rgb(35, 60, 170));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,12 +89,12 @@ main {
 #containerRelogio {
   width: 400px;
   height: 400px;
-  background-color: whitesmoke;
-  border: 3px solid black;
+  background-color: var(--cor-verde);
+  border: 5px solid var(--cor-cinza);
   border-radius: 50%;
   position: relative;
+  box-shadow: 0px 0px 15px var(--cor-verde); 
 }
-
 #containerRelogio .numeroH {
   --rotation: 0;
   position: absolute;
@@ -38,7 +105,6 @@ main {
   font-size: 1.7rem;
   transform: rotate(var(--rotation));
 }
-
 #containerRelogio .n01 { --rotation: 30deg; }
 #containerRelogio .n02 { --rotation: 60deg; }
 #containerRelogio .n03 { --rotation: 90deg; }
@@ -51,24 +117,30 @@ main {
 #containerRelogio .n10 { --rotation: 300deg; }
 #containerRelogio .n11 { --rotation: 330deg; }
 #containerRelogio .n12 { --rotation: 360deg; }
-
+#containerRelogio .numeroH span {
+  color: var(--cor-cinza);
+  font-family: var(--fonteRelogio);
+  font-size: 32px;
+}
+#containerRelogio .n06 span, #containerRelogio .n12 span, #containerRelogio .n03 span, #containerRelogio .n09 span {
+  font-size: 44px;
+}
 #containerRelogio .tempo {
   --rotation: 0;
   position: absolute;
   bottom: 50%;
   left: 50%;
-  border: 1px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border: 1px solid var(--cor-cinza);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
   transform-origin: bottom;
   z-index: 10;
   transform: translateX(-59%) rotate(calc(var(--rotation) * 1deg));
 }
-
 #containerRelogio::after{
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: var(--cor-verde-after);
   z-index: 11;
   width: 15px;
   height: 15px;
@@ -77,40 +149,60 @@ main {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-
 #containerRelogio .tempo.hora {
-  width: 12px;
-  height: 30%;
-  background-color: rgb(7, 210, 224);
-}
-
-#containerRelogio .tempo.minuto {
   width: 8px;
-  height: 35%;
-  background-color: rgb(0, 0, 0);
+  height: 30%;
+  background-color: var(--cor-cinza);
 }
-
+#containerRelogio .tempo.minuto {
+  width: 6px;
+  height: 36%;
+  background-color: var(--cor-cinza);
+}
 #containerRelogio .tempo.segundo {
-  width: 3px;
-  height: 40%;
-  background-color: red;
+  width: 4px;
+  height: 42%;
+  background-color: var(--cor-cinza);
 }
 
 footer {
-  /* margin-top: 8vw; */
   text-align: center;
   font-style: oblique;
-  color: rgb(4, 158, 135);
+  color: var(--cor-cinza);
   font: bold 12pt Arial;
 }
-
 footer p a {
   text-decoration: none; color: inherit;
 }
 
+#containerFooter {
+  position: absolute;
+  bottom: 0;
+  border: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+#containerFooter p {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-verde);
+}
+#containerFooter a {
+  text-decoration: none;
+  color: var(--cor-branco);
+}
+
 @media only screen and (max-width: 800px) {
-  #containerdataHJ {
+  #containerFHDataHJ {
     flex-direction: column;
     text-align: center;
+  }
+  #espacoBottom {
+    margin-bottom: 10px;
+  }
+
+  .manha, .tarde, .noite, .madrugada {
+    background-position: 70%;
   }
 }
