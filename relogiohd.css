@@ -17,38 +17,35 @@
   --cor-cinza: rgba(231, 227, 231, 0.9);
   --cor-branco: rgba(255, 255, 255, 1);
 }
-
-/* .container {
-  display: flex;
+body {
+  background-color: #0d0d0e;
 }
-#container01 {
-  width: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#container01 a { 
-  text-decoration: none;
-  width: 1px;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  color: var(--cor-branco);
-}
-#container02 {
-  width: 90%;
-} */
 
 .manha, .tarde, .noite, .madrugada {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition:filter .5s ease;
-  backface-visibility: hidden;
 }
 .manha { background-image: url("./src/img-dia-01.jpg"); }
 .tarde { background-image: url("./src/img-dia-02.jpg"); }
 .noite { background-image: url("./src/img-noite-01.jpg"); }
 .madrugada { background-image: url("./src/img-noite-02.jpg"); }
+
+#containerHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#containerHeader p {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-verde);
+}
+#containerHeader a {
+  text-decoration: none;
+  font-size: 10px;
+  color: var(--cor-branco);
+}
 
 abbr[title] {
   text-decoration: none;
@@ -56,26 +53,28 @@ abbr[title] {
 
 #containerFHDataHJ {
   display: flex;
-  font-size: 30px;
   justify-content: space-around;
 }
 #containerFHDataHJ span {
-  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  min-width: 450px;
+  padding: 10px 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px var(--cor-verde); 
 }
 #containerFHDataHJ span p {
+  font-size: 30px;
   background-color: var(--cor-verde); 
   color: var(--cor-branco);
 }
-#containerFHDataHJ span .bottomSpanDia, #containerFHDataHJ span .bottomSpanNoite {
-  margin-top: -20px;
+#containerFHDataHJ .bottomSpanDia {
+  border-bottom: 4px solid var(--cor-span-01);
 }
-#containerFHDataHJ span .bottomSpanDia {
-  border-bottom: 2px solid var(--cor-span-01);
-}
-#containerFHDataHJ span .bottomSpanNoite {
-  border-bottom: 2px solid var(--cor-span-02);
+#containerFHDataHJ .bottomSpanNoite {
+  border-bottom: 4px solid var(--cor-span-02);
 }
 
 main {
@@ -175,33 +174,23 @@ footer p a {
   text-decoration: none; color: inherit;
 }
 
-#containerFooter {
-  position: absolute;
-  bottom: 0;
-  border: 0;
-  right: 0;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-#containerFooter p {
-  margin: 0;
-  padding: 0;
-  background-color: var(--cor-verde);
-}
-#containerFooter a {
-  text-decoration: none;
-  color: var(--cor-branco);
-}
-
 @media only screen and (max-width: 800px) {
+  body {
+    min-height: 100vh;
+  }
   #containerFHDataHJ {
     flex-direction: column;
     text-align: center;
   }
+  #containerFHDataHJ span { 
+    min-width: auto;
+  }
+  #containerFHDataHJ span p {
+    font-size: 20px;
+  }
   #espacoBottom {
     margin-bottom: 10px;
   }
-
   .manha, .tarde, .noite, .madrugada {
     background-position: 70%;
   }
