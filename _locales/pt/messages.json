@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "RelógioHD",
+    "description": "O título da extensão, exibido na loja virtual."
+  },
+  "extDesc": {
+    "message": "Uma nova página de guia em formato de relógio com horário e data, sendo seu fundo uma imagem que muda de acordo com o horário atual.",
+    "description":"A descrição da extensão, exibida na loja da web."
+  }
+}
