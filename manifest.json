@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Relógio HD",
+  "description": "Relógio de parede com Data e Horário",
+  "author": "Gabrielf7",
+  "version": "2.2.0",
+  "icons": {
+    "16": "./src/relogio-icon-16x16.png",
+    "32": "./src/relogio-icon-32x32.png",
+    "48": "./src/relogio-icon-48x48.png",
+    "128": "./src/relogio-icon-128x128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "./index.html"
+  },
+  "homepage_url": "https://github.com/gabrielf7/relogiohd"
+}
