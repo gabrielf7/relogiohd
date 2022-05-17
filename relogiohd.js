@@ -83,7 +83,7 @@ function CarregarRelogio() {
   // Informar o nome do fuso horário
   function NomeDoFusoHorario() {
     let lNomeDoFusoHorario = formatoDoFusoHorario("long");
-    document.getElementById("nomeDoFusoHorario").innerHTML = `${lNomeDoFusoHorario}`;
+    document.getElementById("nomeDoFusoHorario").textContent = `${lNomeDoFusoHorario}`;
   }
 
   // Descobrir data e horário
@@ -103,7 +103,7 @@ function CarregarRelogio() {
   // Inserir horário na tag title
   function InserirTextoNoTitle() {
     const pNomeDoFusoHorario = formatoDoFusoHorario("short");
-    document.getElementById("exibirHorarioTitle").innerHTML = `Horário ${pNomeDoFusoHorario} - ${DataHorarioHJ("hr")}`;
+    document.getElementById("exibirHorarioTitle").textContent = `Horário ${pNomeDoFusoHorario} - ${DataHorarioHJ("hr")}`;
   }
 
   // Mudar automaticamente a imagem de fundo de acordo com o horário do dia
