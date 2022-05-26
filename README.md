@@ -10,7 +10,7 @@
 
 ## Site do GitHub.io
 
-O Projeto RelógioHD está disponível para visualização no site do GitHub.io. 
+O Projeto Relógio HD está disponível para visualização no site do GitHub.io. 
 
 > Para acessar o site, basta clicar no ícone do lado direito.
 
