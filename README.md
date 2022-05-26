@@ -14,7 +14,7 @@ O Projeto RelógioHD está disponível para visualização no site do GitHub.io.
 
 > Para acessar o site, basta clicar no ícone do lado direito.
 
-[<img src="https://raw.githubusercontent.com/gabrielf7/relogiohd/main/src/img-browser-edge.png" align="right" width="30">]()
+[<img src="https://raw.githubusercontent.com/gabrielf7/relogiohd/main/src/img-browser-edge.png" align="right" width="30">](https://microsoftedge.microsoft.com/addons/detail/rel%C3%B3gio-hd/kadmfkkbjmcfmphbfcckjfhagjohkeeg)
 [<img src="https://raw.githubusercontent.com/gabrielf7/relogiohd/main/src/img-browser-firefox.png" align="right" width="30">](https://addons.mozilla.org/pt-BR/firefox/addon/rel%C3%B3gio-hd/)
 
 ## Extensão para Navegador
@@ -23,7 +23,7 @@ Para servir como decoração em uma nova guia para navegadores, o projeto foi ad
 
 > Para acessar as extensões, basta clicar no ícone do lado direito.
 
-> Status: Firefox [:heavy_check_mark:] | Edge [:hourglass_flowing_sand: aguardando...]
+> Status: Firefox [:heavy_check_mark:] | Edge [:heavy_check_mark:]
 
 ## Autor
 
