@@ -138,7 +138,6 @@ function CarregarRelogio() {
   }
 
   // Executar
-  InserirTextoNoTitle();
   InserirImagemDeFundo();
   NomeDoFusoHorario();
   InformarDataDeHJ();

@@ -11,11 +11,25 @@
     "48": "./src/relogio-icon-48x48.png",
     "128": "./src/relogio-icon-128x128.png"
   },
+  "browser_action": {
+    "default_title": "Relógio HD",
+    "default_popup": "./extension/firefox/popup/popup.html"
+  },
+  "background": {
+    "page": "./extension/firefox/background/background.html",
+    "persistent": false
+  },
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "./extension/firefox/options/config.html"
+  },
   "chrome_url_overrides": {
     "newtab": "./index.html"
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "activeTab",
+    "management"
   ],
   "homepage_url": "https://github.com/gabrielf7/relogiohd"
 }

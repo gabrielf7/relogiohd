@@ -1,22 +1,4 @@
-*, *::after , *::before {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@font-face {
-  font-family: OneSlice;
-  src: url(./fonts/One\ Slice.otf);
-}
-
-:root{
-  --fonteRelogio: 'OneSlice';
-  --cor-verde: rgba(36, 85, 55, 0.9);
-  --cor-verde-after: rgba(13, 46, 26, 1);
-  --cor-span-01: rgb(238, 241, 4, 0.9);
-  --cor-span-02: rgba(190, 187, 199, 0.9);
-  --cor-cinza: rgba(231, 227, 231, 0.9);
-  --cor-branco: rgba(255, 255, 255, 1);
-}
+@import url(“../../app.css);
 
 body {
   background-color: #0d0d0e;
@@ -45,7 +27,7 @@ body {
 #containerHeader a {
   text-decoration: none;
   font-size: 10px;
-  color: var(--cor-branco);
+  color: var(--cor-branca);
 }
 
 abbr[title] {
@@ -69,13 +51,13 @@ abbr[title] {
 #containerFHDataHJ span p {
   font-size: 30px;
   background-color: var(--cor-verde); 
-  color: var(--cor-branco);
+  color: var(--cor-branca);
 }
 #containerFHDataHJ .bottomSpanDia {
-  border-bottom: 4px solid var(--cor-span-01);
+  border-bottom: 4px solid var(--cor-amarelo-claro);
 }
 #containerFHDataHJ .bottomSpanNoite {
-  border-bottom: 4px solid var(--cor-span-02);
+  border-bottom: 4px solid var(--cor-cinza-semi-escuro);
 }
 
 main {

@@ -5,17 +5,37 @@
   "author": "Gabrielf7",
   "version": "2.2.0",
   "default_locale": "pt",
+  "action": {
+    "default_title": "Relógio HD",
+    "default_popup": "./extension/chromium/popup/popup.html",
+    "default_icon": {
+      "16": "./src/relogio-icon-16x16.png",
+      "32": "./src/relogio-icon-32x32.png",
+      "48": "./src/relogio-icon-48x48.png",
+      "128": "./src/relogio-icon-128x128.png"
+    }
+  },
   "icons": {
     "16": "./src/relogio-icon-16x16.png",
     "32": "./src/relogio-icon-32x32.png",
     "48": "./src/relogio-icon-48x48.png",
     "128": "./src/relogio-icon-128x128.png"
   },
+  "host_permissions": ["*://*/*"],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "management"
+  ],
+  "background": {
+    "service_worker": "./extension/chromium/background/background.js"
+  },
   "chrome_url_overrides": {
     "newtab": "./index.html"
   },
-  "permissions": [
-    "tabs"
-  ],
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "./extension/chromium/options/config.html"
+  },
   "homepage_url": "https://github.com/gabrielf7/relogiohd"
 }
