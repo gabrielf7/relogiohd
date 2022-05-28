@@ -3,7 +3,7 @@
   "name": "__MSG_extName__",
   "description": "__MSG_extDesc__",
   "author": "Gabrielf7",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "default_locale": "pt",
   "icons": {
     "16": "./src/relogio-icon-16x16.png",
