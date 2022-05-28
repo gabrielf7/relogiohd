@@ -29,7 +29,8 @@
   "permissions": [
     "tabs",
     "activeTab",
-    "management"
+    "management",
+    "notifications"
   ],
   "homepage_url": "https://github.com/gabrielf7/relogiohd"
 }

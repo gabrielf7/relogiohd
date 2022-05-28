@@ -25,7 +25,8 @@
   "permissions": [
     "tabs",
     "activeTab",
-    "management"
+    "management",
+    "notifications"
   ],
   "background": {
     "service_worker": "./extension/chromium/background/background.js"
