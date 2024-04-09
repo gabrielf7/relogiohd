@@ -10,7 +10,7 @@
 
 ## Site do GitHub.io
 
-O Projeto Relógio HD está disponível para visualização no site do GitHub.io. 
+O Projeto Relógio HD está disponível para visualização no site do [GitHub.io](https://gabrielf7.github.io/relogiohd/). 
 
 > Para acessar o site, basta clicar no ícone do lado direito.
 
