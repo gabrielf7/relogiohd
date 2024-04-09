@@ -23,11 +23,13 @@ Para servir como decoração em uma nova guia para navegadores, o projeto foi ad
 
 > Para acessar as extensões, basta clicar no ícone do lado direito.
 
-> Status: Firefox [:heavy_check_mark:] | Edge [:heavy_check_mark:]
+> Status: Firefox [✅] | Edge [✅]
 
 ## Autor
 
-~ [@gabrielf7](https://github.com/gabrielf7)
+[![logo github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielf7)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabrielf5/)
 
-### Please follow github and join us!
-Thanks to visiting me and good coding!
+#### Please follow github and join us!
+Thanks to visiting me and good coding! :writing_hand: 
+
